@@ -8,7 +8,7 @@ actions:
     # === App runtime ===
     # ===================
     # === Allow Microsoft accounts to be optional - Enabled
-  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System', value: 'MSAOptional', type: REG_DWORD, data: '1'}
+    #- !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System', value: 'MSAOptional', type: REG_DWORD, data: '1'}
     # ============================
     # === Location and Sensors ===
     # ============================
@@ -114,7 +114,7 @@ actions:
   - !registryValue: {path: 'HKLM\Software\Policies\Microsoft\Windows\DataCollection', value: 'LimitDiagnosticLogCollection', type: REG_DWORD, data: '1'}
     # === Limit Dump Collection - Enabled
   - !registryValue: {path: 'HKLM\Software\Policies\Microsoft\Windows\DataCollection', value: 'LimitDumpCollection', type: REG_DWORD, data: '1'}
-  
+
     # ===============
     # === Edge UI ===
     # ===============

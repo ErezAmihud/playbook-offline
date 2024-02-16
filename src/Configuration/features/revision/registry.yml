@@ -2,7 +2,7 @@
 title: Registry
 description: Revision registry configuration
 privilege: TrustedInstaller
-actions: 
+actions:
   - !writeStatus: {status: "Tweaking registry"}
 features:
   - features\revision\registry\ntlite-settings.yml
@@ -11,11 +11,9 @@ features:
   - features\revision\registry\bypass-requirements.yml
   - features\revision\registry\configure-crash-control.yml
   - features\revision\registry\configure-deprovisioned-apps.yml
-  - features\revision\registry\configure-explorer-folder-view.yml
   - features\revision\registry\configure-explorer-settings.yml
   - features\revision\registry\configure-ifeo.yml
   - features\revision\registry\configure-internet-explorer.yml
-  - features\revision\registry\configure-kernel.yml
   - features\revision\registry\configure-logon.yml
   - features\revision\registry\configure-microsoft-store.yml
   - features\revision\registry\configure-multimedia.yml

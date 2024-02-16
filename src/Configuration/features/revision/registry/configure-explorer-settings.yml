@@ -23,7 +23,6 @@ actions:
   - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState', value: 'FullPath', type: REG_DWORD, data: '1'}
     # === Hide extensions for known file types - Disabled
     # ------> Disabled for Security reasons
-  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'HideFileExt', type: REG_DWORD, data: '0'}
     # === Show sync provider notifications (ads) - Disabled
   - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowSyncProviderNotifications', type: REG_DWORD, data: '0'}
     # =============
@@ -36,9 +35,7 @@ actions:
     # === Disable Wallpaper JPEG (.jpg) image Compression.
   - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'JPEGImportQuality', type: REG_DWORD, data: '100'}
     # === Disable system beeps.
-  - !registryValue: {path: 'HKCU\Control Panel\Sound', value: 'Beep', type: REG_SZ, data: 'no'}
     # === Disable ' - Shortcut.' text on shortcut creation.
-  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer', value: 'link', type: REG_BINARY, data: '00000000'}
     # === Always show all icons and notifications on the taskbar - Disabled
     # ------> The default for this can be set under HKEY_LOCAL_MACHINE.
     # ------> Defaulted due to removal of subjective changes.
@@ -48,12 +45,9 @@ actions:
   - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager', value: 'EnthusiastMode', type: REG_DWORD, data: '1'}
     # === AutoPlay - Disabled
     # ------> Auto play is the notification that pops up when you insert an external storage device, like a USB.
-  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers', value: 'DisableAutoplay', type: REG_DWORD, data: '1'}
     # === AutoRun - Disabled
     # ------> Disable autorun will limit the functionality of autorun.inf on all disks.
     # ------> https://learn.microsoft.com/en-us/windows/win32/shell/autoplay-reg
-  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'NoDriveTypeAutoRun', type: REG_DWORD, data: '255'}
-  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'NoDriveTypeAutoRun', type: REG_DWORD, data: '255'}
     # === Show Task View button in taskbar - Enabled
     # ------> Defaulted due to removal of subjective changes.
   - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowTaskViewButton', type: REG_DWORD, data: '1'}
@@ -77,8 +71,6 @@ actions:
     # ------> https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.StartMenu::NoResolveTrack
   - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'NoResolveTrack', type: REG_DWORD, data: '1'}
     # === Disables the blue screen that pops up when you're trying to shutdown or restart, asking you to save your work.
-  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'AutoEndTasks', type: REG_SZ, data: '0'}
-  - !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Desktop', value: 'AutoEndTasks', type: REG_SZ, data: '0'}
     # === HungAppTimeout also specifies how long (5 seconds by default) the system waits for user processes to end after the user clicks/taps on the End task button in Task Manager.
     # ------> Changed 2 seconds (2000), default is 5 seconds (5000).
     # ------> https://www.tenforums.com/tutorials/97842-change-hungapptimeout-value-windows-10-a.html
@@ -101,7 +93,7 @@ actions:
   - !registryValue: {path: 'HKLM\SYSTEM\ControlSet001\Control', value: 'WaitToKillServiceTimeout', type: REG_SZ, data: '1500'}
     # === Disable Taskbar Animations. (prevents the pop up windows in the taskbar from getting stuck too)
   - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarAnimations', type: REG_DWORD, data: '0', option: 'configure-explorer-taskbar-animations'}
-  
+
   - !registryValue: { path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarAnimations', operation: delete, option: '!configure-explorer-taskbar-animations' }
 
 
@@ -109,7 +101,7 @@ actions:
     # ------> Additionally this also disables Bing in the Start Menu in Windows 10's May 2020 update (20H1).
     # ------> https://www.howtogeek.com/224159/how-to-disable-bing-in-the-windows-10-start-menu/
   - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\Explorer', value: 'DisableSearchBoxSuggestions', type: REG_DWORD, data: '1'}
-    
+
     # === Disable the new Weather and News widgets
     # ------> Other parts of it can be found in configure-ifeo
   - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds', value: 'EnableFeeds', type: REG_DWORD, data: '0'}
@@ -118,7 +110,7 @@ actions:
     # ------> since 22621.1343 builds, Windows 11 tries to reinstall WebExperience even if it is removed and stored in deprovisioned apps list
   - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Dsh', value: 'AllowNewsAndInterests', type: REG_DWORD, data: '0'}
 
-  
+
     # ==========================
     # === Attachment Manager ===
     # ==========================

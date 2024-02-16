@@ -17,7 +17,7 @@ actions:
     # ------> Defaulted due to removal of subjective changes.
   - !registryValue: {path: 'HKLM\Software\Policies\Microsoft\Windows\System', value: 'DisableLockScreenAppNotifications', type: REG_DWORD, data: '0'}
     # === Turn off Windows Startup sound - Enabled
-  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System', value: 'DisableStartupSound', type: REG_DWORD, data: '1'}
+    #- !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System', value: 'DisableStartupSound', type: REG_DWORD, data: '1'}
     # ========================================
     # === Control Panel -> Personalization ===
     # ========================================
