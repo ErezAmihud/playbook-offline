@@ -3,7 +3,7 @@ title: Services
 description: Removal and configuration of services
 privilege: TrustedInstaller
 actions:
-  
+
   - !writeStatus: {status: "Configuring services"}
     # === Beep - Disabled
   - !service: {name: 'Beep', operation: change, startup: 4}
@@ -39,11 +39,20 @@ actions:
   - !service: {name: 'WdiServiceHost', operation: change, startup: 4}
     # === Diagnostic System Host - Disabled
   - !service: {name: 'WdiSystemHost', operation: change, startup: 4}
-  
+
     # == Tcpipreg (experimental)
   - !service: {name: 'tcpipreg', operation: change, startup: 4}
     # == EdgeUpdate - Manual (Disabled breaks WebView installation via Visual Studio)
   - !service: {name: 'edgeupdate', operation: change, startup: 3}
 
   # == Windows Event Collector - Disabled
-  - !service: {name: 'Wecsvc', operation: change, startup: 4} 
+  - !service: {name: 'Wecsvc', operation: change, startup: 4}
+
+  # ------ Microsoft recommendation - 'OK to disable' ------ taken from atlas os
+  - !service: {name: 'lfsvc', operation: change, startup: 4}
+  - !service: {name: 'MapsBroker', operation: change, startup: 4}
+  - !service: {name: 'OneSyncSvc', operation: change, startup: 4}
+  - !service: {name: 'TrkWks', operation: change, startup: 4}
+  - !service: {name: 'PcaSvc', operation: change, startup: 4}
+  - !service: {name: 'DiagTrack', operation: change, startup: 4}
+  - !service: {name: 'WSearch', operation: change, startup: 4}

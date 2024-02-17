@@ -21,7 +21,7 @@ features:
   - features\revision\registry\configure-power-control.yml
   - features\revision\registry\configure-privacy.yml
   - features\revision\registry\configure-search-and-cortana.yml
-  - features\revision\registry\configure-security.yml
+  # - features\revision\registry\configure-security.yml
   - features\revision\registry\configure-start-menu-and-taskbar-notifications).yml
   - features\revision\registry\configure-win32priorityseparation.yml
   - features\revision\registry\configure-windows-settings.yml
